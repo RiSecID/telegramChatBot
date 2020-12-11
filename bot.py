@@ -7,7 +7,7 @@ def tentang(update, context):
 
 def mulai(update, context):
     update.message.reply_text(
-        'Halo, {}, Sekarang Kamu Bisa Memulai Chat Denganku'.format(update.message.from_user.first_name))
+        'Halo {}, Sekarang Kamu Bisa Memulai Chat Denganku'.format(update.message.from_user.first_name))
 	
 def echo(update, context):
     url = 'https://chatbot-indo.herokuapp.com/get/{}'.format(update.effective_message.text)

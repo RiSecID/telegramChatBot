@@ -14,9 +14,9 @@ def echo(update, context):
 updater = Updater('1459712147:AAG8Wu-aia1-4Zo1qYuPBMR9EDYMTJT6woQ',
 use_context=True)
 
+updater.dispatcher.add_handler(CommandHandler('start', mulai))
 echo_handler = MessageHandler(Filters.text, echo)
 updater.dispatcher.add_handler(echo_handler)
-updater.dispatcher.add_handler(CommandHandler('start', mulai))
 
 updater.start_polling()
 updater.idle()

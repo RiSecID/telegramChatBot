@@ -1,6 +1,9 @@
 from telegram.ext import Updater, MessageHandler, Filters
 import requests,json
 
+def mulai(update, context):
+    update.message.reply_text(
+        'Halo, {}, Sekarang Kamu Bisa Memulai Chat Denganku'.format(update.message.from_user.first_name))
 	
 def echo(update, context):
     url = 'https://chatbot-indo.herokuapp.com/get/{}'.format(update.effective_message.text)
@@ -13,6 +16,7 @@ use_context=True)
 
 echo_handler = MessageHandler(Filters.text, echo)
 updater.dispatcher.add_handler(echo_handler)
+updater.dispatcher.add_handler(CommandHandler('start', mulai))
 
 updater.start_polling()
 updater.idle()

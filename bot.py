@@ -3,7 +3,7 @@ import requests,json
 
 def tentang(update, context):
     update.message.reply_text(
-        "Hi Bro Aku Di Buat Orang Yang Bernama Rian Dan ini Akun Telegramnya [Rian²²](https://t.me/rian1337)".format(update.message.from_user.first_name))
+        "Hi Bro Namaku Mimi Aku Di Buat Oleh Orang ini @rian1337 ".format(update.message.from_user.first_name))
 
 def mulai(update, context):
     update.message.reply_text(

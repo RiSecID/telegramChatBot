@@ -1,1 +1,2 @@
-worker: php worker/bot.php
+web: vendor/bin/heroku-php-apache2 web/
+worker: php worker/myscript.php

@@ -5,6 +5,10 @@ def tentang(update, context):
     update.message.reply_text(
         "Hi Bro Namaku Mimi aku diintegrasikan dengan API SimSimi Premium Aku Di Buat Oleh Orang ini @rian1337 [Python 3.8.0] ".format(update.message.from_user.first_name))
 
+def donasi(update, context):
+    update.message.reply_text(
+        "Hehe senang mendengarnya apabila kamu ingin berdonasi agar bot ini terus aktif setiap saat kamu bisa chat @rian1337".format(update.message.from_user.first_name))
+
 def mulai(update, context):
     update.message.reply_text(
         'Halo {}, Sekarang Kamu Bisa Memulai Chat Denganku'.format(update.message.from_user.first_name))
@@ -20,6 +24,7 @@ use_context=True)
 
 updater.dispatcher.add_handler(CommandHandler('start', mulai))
 updater.dispatcher.add_handler(CommandHandler('tentang', tentang))
+updater.dispatcher.add_handler(CommandHandler('donasi', donasi))
 echo_handler = MessageHandler(Filters.text, echo)
 updater.dispatcher.add_handler(echo_handler)
 

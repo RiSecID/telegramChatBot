@@ -28,5 +28,5 @@ updater.dispatcher.add_handler(CommandHandler('donasi', donasi))
 echo_handler = MessageHandler(Filters.text, echo)
 updater.dispatcher.add_handler(echo_handler)
 
-updater.start_polling()
+updater.start_polling(
 updater.idle()

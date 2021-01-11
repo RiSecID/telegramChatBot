@@ -14,13 +14,12 @@ def mulai(update, context):
         'Halo {}, Sekarang Kamu Bisa Memulai Chat Denganku'.format(update.message.from_user.first_name))
 	
 def echo(update, context):
-    # url = 'https://secureapp.simsimi.com/v1/simsimi/talkset?uid=297390035&av=6.9.3.7&lc=id&cc=ID&tz=Asia%2FJakarta&os=a&ak=Nsh1x94iNA2oftvixJMmTj1awEk%3D&message_sentence={}&normalProb=8&isFilter=1&talkCnt=8&talkCntTotal=8&reqFilter=1&session=MMWBpntzK2hS64aX7SuhQHTcsHCrVftmwJBk7cGd3ViCyVTFx4ywxuEvvTHnQWrt9ENooUhdQXaD6XrDuTyGbSv2&triggerKeywords=%5B%5D'.format(update.effective_message.text)
-    # r = requests.get(url)
-    # data = json.loads(r.text)
-    # update.effective_message.reply_text(data['simsimi_talk_set']['answers'][0]['sentence'])
-    update.effective_message.reply_text("Bot mati dulu ya gan")
+    url = 'https://secureapp.simsimi.com/v1/simsimi/talkset?uid=297390035&av=6.9.3.7&lc=id&cc=ID&tz=Asia%2FJakarta&os=a&ak=Nsh1x94iNA2oftvixJMmTj1awEk%3D&message_sentence={}&normalProb=8&isFilter=1&talkCnt=8&talkCntTotal=8&reqFilter=1&session=MMWBpntzK2hS64aX7SuhQHTcsHCrVftmwJBk7cGd3ViCyVTFx4ywxuEvvTHnQWrt9ENooUhdQXaD6XrDuTyGbSv2&triggerKeywords=%5B%5D'.format(update.effective_message.text)
+    r = requests.get(url)
+    data = json.loads(r.text)
+    update.effective_message.reply_text(data['simsimi_talk_set']['answers'][0]['sentence']
 
-updater = Updater('1459712147:AAGIk8Q6DNyl-HbgtsbuP7u2AnItfIESqJE',
+updater = Updater('1534051820:AAHntqYYXUwD-teN_m8Y1DLJ8MCEGC9dGRw',
 use_context=True)
 
 updater.dispatcher.add_handler(CommandHandler('start', mulai))

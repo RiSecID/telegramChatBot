@@ -3,7 +3,7 @@ import requests,json
 
 def tentang(update, bot):
     update.message.reply_text(
-        "Hi Bro Namaku Mimi aku diintegrasikan dengan API SimSimi Premium Aku Di Buat Oleh Orang ini @rian1337 [Python 3.8.0] ".format(update.message.from_user.first_name))
+        "Hi Bro Namaku Mimi aku diintegrasikan dengan API SimSimi Aku Di Buat Oleh Orang ini @rian1337 [Python 3.8.0] ".format(update.message.from_user.first_name))
 
 def donasi(update, bot):
     update.message.reply_text(
